@@ -18,7 +18,7 @@ test('create an appointment', () => {
 test('cannot create an appointment with same end date and start date', () => {
   const startsAt = new Date()
   const endsAt = new Date()
-  startsAt.setDate(startsAt.getDate() +2)
+  startsAt.setDate(startsAt.getDate() +1)
   endsAt.setDate(endsAt.getDate() +1)
 
   expect(() => {
