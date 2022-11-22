@@ -9,7 +9,7 @@ export class Appointment {
   constructor(props: AppointmentProps) {
     const { startsAt, endsAt } = props
 
-    if(startsAt < new Date()) {
+    if(startsAt <= new Date()) {
       throw new Error('startsAt must be greate than date now')
     }
 
